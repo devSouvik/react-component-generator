@@ -12,3 +12,5 @@ It creates the following files:
 -   <folder_name>.mocks.ts [mock data file]
 -   <folder_name>.tests.tsx [test cases]
 -   <folder_name>.stories.tsx [storybook file]
+
+### all the generated files have some boilerplate code, modify them according to your need

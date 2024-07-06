@@ -27,7 +27,23 @@ export function activate(context: vscode.ExtensionContext) {
                 try {
                     for (const fileName of fileNames) {
                         const filePath = path.join(folderPath, fileName);
-                        await fs.promises.writeFile(filePath, "");
+                        let fileContent = "";
+
+                        if (
+                            fileName.endsWith(".tsx") &&
+                            fileName === `${reactFCName}.tsx`
+                        ) {
+                            fileContent = `import React from "react";
+                                        const ${reactFCName} = () => {
+                                            return <div>${reactFCName}</div>;
+                                        };
+
+                                        export default ${reactFCName};`;
+                        } else {
+                            fileContent = `export {}`;
+                        }
+
+                        await fs.promises.writeFile(filePath, fileContent);
                     }
                     vscode.window.showInformationMessage(
                         "Files generated successfully."

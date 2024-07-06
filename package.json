@@ -2,7 +2,7 @@
   "name": "react-component-auto-files-generator",
   "displayName": "react component auto files generator",
   "description": "This extension creates all the required files for a basic react component",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "souvikguria",
   "icon": "logo.jpg",
   "engines": {
